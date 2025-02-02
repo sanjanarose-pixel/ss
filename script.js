@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to extract access token from the URL hash
     function getAccessToken() {
-        const hash = window.location.hash.substring(1);
-        const params = new URLSearchParams(hash);
-        return params.get("access_token");
+        const hash = window.location.hash.substring(1); // Get everything after the '#'
+        const params = new URLSearchParams(hash); // Use URLSearchParams to parse the query string
+        return params.get("access_token"); // Extract the access_token parameter
     }
 
     // Get access token from URL if available
@@ -18,4 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handling page navigation when 'Continue' button is clicked
     const continueButton = document.querySelector('.continue-btn');
     if (continueButton) {
-        continueButton
+        continueButton.addEventListener('click', () => {
+            console.log("Continue button clicked!");
+            window.location.href = 'intro.html'; // Navigate to the next page
+        });
+    }
+});
