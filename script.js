@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Function to extract access token from the URL hash
     function getAccessToken() {
-        const hash = window.location.hash.substring(1); // Get everything after the '#'
-        const params = new URLSearchParams(hash); // Use URLSearchParams to parse the query string
-        return params.get("access_token"); // Extract the access_token parameter
+        const hash = window.location.hash.substring(1);
+        const params = new URLSearchParams(hash);
+        return params.get("access_token");
     }
 
     // Get access token from URL if available
     const accessToken = getAccessToken();
     if (accessToken) {
         console.log("Spotify Access Token:", accessToken);
-        // You can now use the access token to make API requests to Spotify (e.g., fetch playlists)
+        // You can now use the access token to make API requests to Spotify
     } else {
         console.log("No access token found.");
     }
