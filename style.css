@@ -13,9 +13,9 @@ button {
   border-radius: 50px;
   padding: 15px 30px;
   cursor: pointer;
-  margin-down: 200px;
-  margin-right: 300px;
   font-weight: bold;
+  margin: 10px auto; /* Centering button horizontally */
+  display: block;
 }
 
 button:hover {
@@ -30,91 +30,20 @@ button:hover {
   background-position: center;
   height: 100vh;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column;
 }
 
 .welcome-container {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* Introduction Page Styles */
-.intro-page {
-  background-image: url('Welcome.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.intro-container {
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-/* Mood Selection Page Styles */
-.mood-page {
-  background-image: url('mood.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-}
-
-.mood-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.image-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 100px;
-}
-.image-row img{
-  margin-top: 60px;
-  margin-right: 50px;
-  width: 120px;
-}
-
-.mood-img {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-/* Artist Selection Page Styles */
-.artist-page {
+/* Other pages */
+.intro-page, .mood-page, .artist-page {
   background-image: url('artist.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
-
-.artist-container input {
-  display: block;
-  margin: 10px;
-  padding: 10px;
-  width: 250px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 100;
-}
-
-.artist-container button {
-  margin-top: 20px;
-}
-
